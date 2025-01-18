@@ -1,10 +1,10 @@
 title: Web Development Tutorial
 content-title: Blog on Web Development
 
-### MarkDown Extensions:
+### MarkDown Extensions & Favicon Utility:
 - [Markdown Preview Enhancer](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-
+- [favicon Generator](https://favicon.io/)
 ---
 ### Web Development Tutorial
 
