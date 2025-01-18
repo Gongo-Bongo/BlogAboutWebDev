@@ -14,7 +14,8 @@ function applyTheme(theme) {
         DarkMordernMinimal: "styles/DarkThemes/mordernMinimal.css",
         Darkmonochrome: "styles/DarkThemes/monochrome.css",
         DarkEarthly: "styles/DarkThemes/earthly.css",
-        DarkOceanBreeze: "styles/DarkThemes/oceanBreeze.css"
+        DarkOceanBreeze: "styles/DarkThemes/oceanBreeze.css",
+        NightOwl: "styles/DarkThemes/NightOwl.css"
     };
 
     // Get the correct path based on the selected theme

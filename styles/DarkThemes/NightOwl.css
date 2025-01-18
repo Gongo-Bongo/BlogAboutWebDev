@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Bungee+Tint&family=Kode+Mono:wght@400..700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 24px;
+    font-style: normal;
+    background-color: #011627;
+    color: #d6deeb;
+    gap: 10px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #011627;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    height: 69px;
+}
+
+.title p {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 7px;
+    animation: glow 1.5s infinite alternate;
+    font-size: 40px;
+    color: #82aaff;
+}
+
+#themes {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#themes label {
+    font-size: 0.9rem;
+    color: #d6deeb;
+    font-weight: 500;
+}
+
+#themes select {
+    background-color: #011627;
+    color: #d6deeb;
+    border: 1px solid #1d3b53;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#themes select:hover {
+    background-color: #1d3b53;
+    border-color: #3b5366;
+}
+
+#themes select:focus {
+    outline: none;
+    box-shadow: 0 0 4px #82aaff;
+    border-color: #82aaff;
+}
+
+#fonts {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#fonts label {
+    font-size: 0.9rem;
+    color: #d6deeb;
+    font-weight: 500;
+}
+
+#fonts select {
+    background-color: #011627;
+    color: #d6deeb;
+    border: 1px solid #1d3b53;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#fonts select:hover {
+    background-color: #1d3b53;
+    border-color: #3b5366;
+}
+
+#fonts select:focus {
+    outline: none;
+    box-shadow: 0 0 4px #82aaff;
+    border-color: #82aaff;
+}
+
+.note {
+    color: #ef5350;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+mjx-container[display="true"] {
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    word-wrap: break-word;
+    color: #d6deeb;
+    padding: 12px;
+    background-color: #011627;
+    border-radius: 8px;
+    border: 1px solid #1d3b53;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow-x: auto;
+    white-space: nowrap;
+    position: relative;
+}
+
+mjx-container[display="true"]::-webkit-scrollbar {
+    height: 6px;
+    background: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+mjx-container[display="true"]::-webkit-scrollbar-thumb {
+    background: #82aaff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+mjx-container[display="true"]::-webkit-scrollbar-thumb:hover {
+    background: #d6deeb;
+}
+
+mjx-container[display="true"]::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+mjx-container[display="true"] {
+    scrollbar-width: thin;
+    scrollbar-color: #82aaff transparent;
+    animation: fadeOutScrollbar 2s ease-in 3s forwards;
+}
+
+mjx-container[display="true"]:hover::-webkit-scrollbar,
+mjx-container[display="true"]:active::-webkit-scrollbar {
+    opacity: 1;
+}
+
+@keyframes fadeInScrollbar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutScrollbar {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+mjx-container[display="true"] {
+    background-color: #011627;
+    padding: 15px;
+    border: 1px solid #1d3b53;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+mjx-container[display="true"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    background-color: #1d3b53;
+}
+
+mjx-container[display="true"] {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        width: fit-content;
+    }
+    .title {
+        font-size: 28px;
+        height: 50px;
+        padding-top: 5px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.title p:hover {
+    animation: zoom-in 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-10px);
+    }
+    20% {
+        transform: translateX(10px);
+    }
+    30% {
+        transform: translateX(-5px);
+    }
+    40% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 15px #fff;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 30px #fff, 0 0 20px #fff, 0 0 25px #fff;
+    }
+}
+
+.container {
+    width: 1218px;
+}
+
+.content {
+    background-color: #011627;
+    color: #d6deeb;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: 2.0;
+    word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    transition: background-color 0.4s ease-in-out, color 0.3s ease;
+}
+
+h1 {
+    color: #82aaff;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1:hover {
+    background-color: #1d3b53;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #c792ea;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2:hover {
+    background-color: #1d3b53;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+h3 {
+    color: #7fdbca;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3:hover {
+    background-color: #1d3b53;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+h4 {
+    color: #ecc48d;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h4:hover {
+    background-color: #1d3b53;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+h5 {
+    color: #ff5874;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h5:hover {
+    background-color: #1d3b53;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+h6 {
+    color: #d6deeb;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h6:hover {
+    background-color: #1d3b53;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+strong {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #82aaff;
+}
+
+strong:hover {
+    background-color: #1d3b53;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+pre {
+    display: flex;
+    background-color: #011627 !important;
+    color: #d6deeb !important;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 2rem;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+pre:hover {
+    animation: shake 0.5s ease-in-out;
+}
+
+code {
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+code:not([class*="language-"]) {
+    background-color: #1d3b53;
+    color: #d6deeb;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.copy-button {
+    height: fit-content;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    background-color: transparent;
+    color: #d6deeb;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.copy-button i {
+    pointer-events: none;
+}
+
+.copy-button:active {
+    transform: scale(0.9);
+}
+
+.copied::after {
+    content: "Copied!";
+    font-size: 0.9rem;
+    color: #82aaff;
+    position: absolute;
+    right: 40px;
+    top: 3px;
+    opacity: 1;
+    animation: fadeout 2.3s forwards;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        padding: 7px;
+        font-size: 16px;
+    }
+    .title {
+        font-size: 18px;
+        height: auto;
+        padding: 7px 0;
+    }
+    .container {
+        width: 100%;
+        padding: 8px;
+    }
+    .content {
+        padding: 10px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.2rem;
+    }
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+        font-size: 7px;
+    }
+    code:not([class*="language-"]) {
+        font-size: 16px;
+    }
+    .copy-button {
+        top: 5px;
+        right: 5px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+        padding: 8px 0;
+    }
+    .content {
+        font-size: 10px;
+    }
+}
